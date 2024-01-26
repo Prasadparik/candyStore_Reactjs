@@ -42,16 +42,18 @@
   margin: 1rem;
 }
 .amountForm input {
-  width: 30px;
+  width: 20px;
   margin: 0.5rem;
+  border: 1px solid #7a6842;
+  border-radius: 5px;
 }
 .amountForm button {
-  background-color: #0e9755;
+  background-color: #ffffff;
   padding: 0.3rem 1rem;
   font-weight: 600;
-  color: #fff;
-  border-color: #0e9755;
+  color: rgb(223, 160, 0);
+  border-color: #c0c0c0;
   border-style: none;
   border-radius: 0.2rem;
-  box-shadow: 0 2px 2px 1px #ccc;
+  box-shadow: 0px 0px 1px 1px #dad7d0;
 }

@@ -37,7 +37,7 @@ function FoodItemsList() {
               </li>
             </ul>
             <form className="amountForm">
-              <input type="number" placeholder="0" />
+              <input type="text" placeholder="0" />
               <button>Add</button>
             </form>
           </div>
