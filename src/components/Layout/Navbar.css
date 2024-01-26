@@ -14,14 +14,14 @@
   margin: 0 1rem;
   margin-top: 0.3rem;
 }
-ul {
+.Navbar ul {
   list-style: none;
   display: flex;
   background-color: #eee;
   padding: 0.3rem 1rem;
   border-radius: 10rem;
 }
-ul li {
+.Navbar ul li {
   margin: 0 0.5rem;
 }
 .cartIcon {

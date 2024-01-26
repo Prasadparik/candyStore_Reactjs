@@ -1,0 +1,32 @@
+.FoodListWrapper {
+  padding: 2rem;
+  margin: 2rem 4rem;
+  border-radius: 2rem;
+}
+.FoodListWrapper h1 {
+  font-style: oblique;
+  color: #ba8200;
+  background-color: #272114;
+  text-align: center;
+  box-shadow: 0px 2px 8px 0px #ffefca;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.FoodListWrapper ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-bottom: 2px solid #ffefca;
+}
+.FoodListWrapper li:first-child {
+  font-size: larger;
+}
+.FoodListWrapper li:nth-child(2) {
+  font-weight: 600;
+  opacity: 0.6;
+}
+.FoodListWrapper li:last-child {
+  font-size: large;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: rgb(174, 126, 5);
+}
