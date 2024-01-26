@@ -11,11 +11,15 @@
   box-shadow: 0px 2px 8px 0px #ffefca;
   border-radius: 0.5rem 0.5rem 0 0;
 }
+.innerWrapper {
+  display: flex;
+  border-bottom: 2px solid #ffefca;
+}
 .FoodListWrapper ul {
+  flex-grow: 1;
   list-style: none;
   margin: 1rem 0;
   padding: 1rem;
-  border-bottom: 2px solid #ffefca;
 }
 .FoodListWrapper li:first-child {
   font-size: larger;
@@ -29,4 +33,25 @@
   font-weight: 600;
   margin-top: 0.5rem;
   color: rgb(174, 126, 5);
+}
+
+.amountForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.amountForm input {
+  width: 30px;
+  margin: 0.5rem;
+}
+.amountForm button {
+  background-color: #0e9755;
+  padding: 0.3rem 1rem;
+  font-weight: 600;
+  color: #fff;
+  border-color: #0e9755;
+  border-style: none;
+  border-radius: 0.2rem;
+  box-shadow: 0 2px 2px 1px #ccc;
 }

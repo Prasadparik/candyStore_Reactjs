@@ -24,17 +24,23 @@ function FoodItemsList() {
       <div className="FoodListWrapper">
         <h1>Menu</h1>
         {FoodList.map((item, i) => (
-          <ul>
-            <li>
-              <b>{item.name}</b>
-            </li>
-            <li>
-              <i>{item.description}</i>
-            </li>
-            <li>
-              <b>$ {item.price}</b>
-            </li>
-          </ul>
+          <div className="innerWrapper">
+            <ul>
+              <li>
+                <b>{item.name}</b>
+              </li>
+              <li>
+                <i>{item.description}</i>
+              </li>
+              <li>
+                <b>$ {item.price}</b>
+              </li>
+            </ul>
+            <form className="amountForm">
+              <input type="number" placeholder="0" />
+              <button>Add</button>
+            </form>
+          </div>
         ))}
       </div>
     </>
