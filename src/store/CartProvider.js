@@ -3,11 +3,39 @@ import CartContext from "./cart-context";
 
 const CartProvider = (props) => {
   const [items, setitems] = useState([]);
+  const [totalAmount, settotalAmount] = useState(0);
+  const [menu, setMenu] = useState([
+    {
+      id: 1,
+      amount: 0,
+      name: "pizza",
+      description: "Finest fish and veggies",
+      price: 22.99,
+    },
+    {
+      id: 2,
+      amount: 0,
+      name: "butter paneer",
+      description: "Finest fish and veggies",
+      price: 16.99,
+    },
+    {
+      id: 3,
+      amount: 0,
+      name: "Veg Burger",
+      description: "Finest fish and veggies",
+      price: 12.49,
+    },
+  ]);
 
   const addItemToCartHandler = (newItem) => {
     const updatedItems = [...items];
+    const updatedMenu = [...menu];
 
     const existingItemIndex = updatedItems.findIndex(
+      (item) => item.id === newItem.id
+    );
+    const existingMenuIndex = updatedMenu.findIndex(
       (item) => item.id === newItem.id
     );
 
@@ -19,13 +47,26 @@ const CartProvider = (props) => {
       updatedItems.push({ ...newItem, amount: 1 });
     }
 
+    updatedMenu[existingMenuIndex].amount += 1;
+
     setitems(updatedItems);
+    setMenu(updatedMenu);
+
+    const updatedTotalAmount = updatedItems.reduce(
+      (accum, item) => accum + item.price * item.amount,
+      0
+    );
+    settotalAmount(updatedTotalAmount);
   };
-  console.log("Items", items);
+
   const removeItemToCartHandler = (newItem) => {
     const updatedItems = [...items];
+    const updatedMenu = [...menu];
 
     const existingItemIndex = updatedItems.findIndex(
+      (item) => item.id === newItem.id
+    );
+    const existingMenuIndex = updatedMenu.findIndex(
       (item) => item.id === newItem.id
     );
 
@@ -34,12 +75,25 @@ const CartProvider = (props) => {
       updatedItems[existingItemIndex].amount -= 1;
     }
 
-    setitems(updatedItems);
+    updatedMenu[existingMenuIndex].amount -= 1;
+
+    const filteredItems = updatedItems.filter((item) => item.amount !== 0);
+    console.log("Filter::", filteredItems);
+
+    setitems(filteredItems);
+    setMenu(updatedMenu);
+
+    const updatedTotalAmount = filteredItems.reduce(
+      (accum, item) => accum + item.price / item.amount,
+      0
+    );
+    settotalAmount(updatedTotalAmount);
   };
 
   const cartContext = {
+    menu: menu,
     items: items,
-    totalAmount: 0,
+    totalAmount: totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemToCartHandler,
   };

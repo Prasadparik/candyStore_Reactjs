@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./FoodItemsList.css";
 import CartContext from "../../store/cart-context";
+import AddAmountForm from "../UI/AddAmountForm";
 
 const List = [
   {
@@ -27,34 +28,8 @@ const List = [
 ];
 
 function FoodItemsList() {
-  const [FoodList, setFoodList] = useState(List);
-  const cartCtx = useContext(CartContext);
-
-  const AddItemInCartHandler = (e, newItem, i) => {
-    e.preventDefault();
-    const updatedFoodList = [...FoodList];
-    updatedFoodList[i].amount += 1;
-
-    cartCtx.addItem({
-      ...newItem,
-      amount: updatedFoodList[i].amount,
-    });
-
-    setFoodList(updatedFoodList);
-  };
-
-  const RemoveItemInCartHandler = (e, newItem, i) => {
-    e.preventDefault();
-    const updatedFoodList = [...FoodList];
-    updatedFoodList[i].amount -= 1;
-
-    cartCtx.removeItem({
-      ...newItem,
-      amount: updatedFoodList[i].amount,
-    });
-
-    setFoodList(updatedFoodList);
-  };
+  const MenuCtx = useContext(CartContext);
+  const [FoodList, setFoodList] = useState(MenuCtx.menu);
 
   return (
     <>
@@ -76,22 +51,7 @@ function FoodItemsList() {
                 <span>Amount: {item.amount}</span>
               </li>
             </ul>
-            <form className="amountForm">
-              {item.amount > 0 ? (
-                <>
-                  <button onClick={(e) => RemoveItemInCartHandler(e, item, i)}>
-                    -
-                  </button>
-                  <div className="MealAmountCount">{item.amount}</div>
-                </>
-              ) : (
-                <></>
-              )}
-
-              <button onClick={(e) => AddItemInCartHandler(e, item, i)}>
-                Add
-              </button>
-            </form>
+            <AddAmountForm FoodList={FoodList} item={item} i={i} />
           </div>
         ))}
       </div>
