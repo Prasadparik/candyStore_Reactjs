@@ -10,7 +10,7 @@ function Navbar({ cartToggle }) {
   return (
     <div className="Navbar">
       <div className="logo">
-        <b>Meals</b>
+        <b>Candy Store</b>
       </div>
       <ul onClick={cartToggle}>
         <li>

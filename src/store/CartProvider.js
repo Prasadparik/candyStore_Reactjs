@@ -87,12 +87,20 @@ const CartProvider = (props) => {
     setMenu(updatedMenu);
   };
 
+  // Add Item to Menu --------------------
+
+  const addItemToMenu = (newCandy) => {
+    const updatedMenu = [...menu, newCandy];
+    setMenu(updatedMenu);
+  };
+
   const cartContext = {
     menu: menu,
     items: items,
     totalAmount: totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemToCartHandler,
+    addItemToMenu: addItemToMenu,
   };
   return (
     <CartContext.Provider value={cartContext}>

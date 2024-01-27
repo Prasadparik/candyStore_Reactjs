@@ -1,11 +1,11 @@
 .FoodListWrapper {
-  background-color: #ffe5bb;
+  background-color: #ff808029;
   padding: 3rem;
 }
 .FoodListWrapper h1 {
   font-style: oblique;
-  color: #ba8200;
-  background-color: #272114;
+  color: #763939;
+  background-color: #ff808083;
   text-align: center;
   box-shadow: 0px 2px 8px 0px #ffefca;
   border-radius: 0.5rem 0.5rem 0 0;
@@ -32,7 +32,7 @@
   font-size: large;
   font-weight: 600;
   margin-top: 0.5rem;
-  color: rgb(174, 126, 5);
+  color: #ff8080;
 }
 
 .amountForm {
@@ -44,17 +44,16 @@
 .MealAmountCount {
   padding: 0.2rem 0.7rem;
   margin: 0 0.3rem;
-  background: rgb(255, 250, 236);
-  border: 2px solid #ffe8b1;
+  background: #ff808036;
+  border: 2px solid #ff8080;
   border-radius: 0.3rem;
 }
 .amountForm button {
   background-color: #ffffff;
   padding: 0.3rem 1rem;
   font-weight: 600;
-  color: rgb(223, 160, 0);
-  border-color: #c0c0c0;
-  border-style: none;
-  border-radius: 0.2rem;
-  box-shadow: 0px 0px 1px 1px #dad7d0;
+  color: #ff8080;
+  border: 2px solid#ff8080;
+
+  border-radius: 4rem;
 }

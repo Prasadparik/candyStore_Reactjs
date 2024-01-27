@@ -9,22 +9,3 @@
   width: 100%;
   margin-top: 5rem;
 }
-.summary {
-  background-color: rgb(37, 32, 27);
-  margin: 4rem 4rem;
-  padding: 2rem;
-  box-shadow: 0 0 8px 4px #eee;
-  border-radius: 2rem 0 2rem 0;
-}
-.summary b {
-  font-size: xx-large;
-  color: #d88600;
-  font-style: oblique;
-}
-.summary p {
-  font-style: oblique;
-  margin-top: 1rem;
-  color: #ffe5bb;
-  letter-spacing: 0.1rem;
-  line-height: 2rem;
-}
