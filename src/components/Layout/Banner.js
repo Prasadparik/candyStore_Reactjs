@@ -3,7 +3,7 @@ import BannerImage from "../../assets/icons/banner.jpg";
 import "./Banner.css";
 function Banner() {
   return (
-    <div>
+    <div className="bannerWrapper">
       <img src={BannerImage} className="BannerImage" alt="Banner" />
       <div className="summary">
         <b>Delicious Food, Delivered To You</b>

@@ -1,7 +1,6 @@
 .FoodListWrapper {
-  padding: 2rem;
-  margin: 2rem 4rem;
-  border-radius: 2rem;
+  background-color: #ffe5bb;
+  padding: 3rem;
 }
 .FoodListWrapper h1 {
   font-style: oblique;
@@ -14,6 +13,7 @@
 .innerWrapper {
   display: flex;
   border-bottom: 2px solid #ffefca;
+  background-color: #ffffff;
 }
 .FoodListWrapper ul {
   flex-grow: 1;
@@ -41,11 +41,12 @@
   align-items: center;
   margin: 1rem;
 }
-.amountForm input {
-  width: 20px;
-  margin: 0.5rem;
-  border: 1px solid #7a6842;
-  border-radius: 5px;
+.MealAmountCount {
+  padding: 0.2rem 0.7rem;
+  margin: 0 0.3rem;
+  background: rgb(255, 250, 236);
+  border: 2px solid #ffe8b1;
+  border-radius: 0.3rem;
 }
 .amountForm button {
   background-color: #ffffff;
