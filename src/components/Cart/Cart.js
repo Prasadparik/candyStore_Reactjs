@@ -11,7 +11,7 @@ function Cart({ cartToggle }) {
       <li>
         <b>{item.name}</b> <br />
         <i>{item.description}</i> <br />
-        <i> Amt: {item.amount}</i> <br />
+        <i> Price: $ {item.price}</i> <br />
       </li>
       <li>
         <AddAmountForm

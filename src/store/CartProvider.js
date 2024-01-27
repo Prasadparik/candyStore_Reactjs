@@ -10,21 +10,21 @@ const CartProvider = (props) => {
       amount: 0,
       name: "pizza",
       description: "Finest fish and veggies",
-      price: 22.99,
+      price: 10,
     },
     {
       id: 2,
       amount: 0,
       name: "butter paneer",
       description: "Finest fish and veggies",
-      price: 16.99,
+      price: 20,
     },
     {
       id: 3,
       amount: 0,
       name: "Veg Burger",
       description: "Finest fish and veggies",
-      price: 12.49,
+      price: 5,
     },
   ]);
 
@@ -42,9 +42,11 @@ const CartProvider = (props) => {
     if (existingItemIndex !== -1) {
       // Item exists in the cart
       updatedItems[existingItemIndex].amount += 1;
+      settotalAmount(totalAmount + updatedItems[existingItemIndex].price);
     } else {
       // Item doesn't exist in the cart
       updatedItems.push({ ...newItem, amount: 1 });
+      settotalAmount(totalAmount + newItem.price);
     }
 
     updatedMenu[existingMenuIndex].amount += 1;
@@ -73,6 +75,7 @@ const CartProvider = (props) => {
     if (existingItemIndex !== -1) {
       // Item exists in the cart
       updatedItems[existingItemIndex].amount -= 1;
+      settotalAmount(totalAmount - updatedItems[existingItemIndex].price);
     }
 
     updatedMenu[existingMenuIndex].amount -= 1;
@@ -82,12 +85,6 @@ const CartProvider = (props) => {
 
     setitems(filteredItems);
     setMenu(updatedMenu);
-
-    const updatedTotalAmount = filteredItems.reduce(
-      (accum, item) => accum + item.price / item.amount,
-      0
-    );
-    settotalAmount(updatedTotalAmount);
   };
 
   const cartContext = {
