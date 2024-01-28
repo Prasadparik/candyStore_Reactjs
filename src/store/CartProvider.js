@@ -4,29 +4,7 @@ import CartContext from "./cart-context";
 const CartProvider = (props) => {
   const [items, setitems] = useState([]);
   const [totalAmount, settotalAmount] = useState(0);
-  const [menu, setMenu] = useState([
-    {
-      id: 1,
-      amount: 0,
-      name: "pizza",
-      description: "Finest fish and veggies",
-      price: 10,
-    },
-    {
-      id: 2,
-      amount: 0,
-      name: "butter paneer",
-      description: "Finest fish and veggies",
-      price: 20,
-    },
-    {
-      id: 3,
-      amount: 0,
-      name: "Veg Burger",
-      description: "Finest fish and veggies",
-      price: 5,
-    },
-  ]);
+  const [menu, setMenu] = useState([]);
 
   const addItemToCartHandler = (newItem) => {
     const updatedItems = [...items];

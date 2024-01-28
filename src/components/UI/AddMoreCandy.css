@@ -1,0 +1,41 @@
+.add-candy-form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 20px;
+  background-color: #ffffffa3;
+  border-radius: 8px;
+  margin: 1rem 4rem;
+}
+
+input {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  border: 3px solid #ff8080;
+  border-radius: 4px;
+}
+
+button {
+  /* margin-top: 10px; */
+  padding: 10px;
+  background-color: #ff8080;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  background-color: #fff;
+  border: 3px solid #ff8080;
+  color: #ff8080;
+  border-radius: 4px;
+  margin-top: 0;
+}
+
+button:hover {
+  background-color: #ff808072;
+  color: #16191d;
+}

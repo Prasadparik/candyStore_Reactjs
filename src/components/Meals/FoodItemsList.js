@@ -1,11 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./FoodItemsList.css";
 import CartContext from "../../store/cart-context";
 import AddAmountForm from "../UI/AddAmountForm";
 
 function FoodItemsList() {
   const MenuCtx = useContext(CartContext);
-  const [FoodList, setFoodList] = useState(MenuCtx.menu);
 
   return (
     <>
@@ -27,7 +26,7 @@ function FoodItemsList() {
                 <span>Amount: {item.amount}</span>
               </li>
             </ul>
-            <AddAmountForm FoodList={FoodList} item={item} i={i} />
+            <AddAmountForm FoodList={MenuCtx.menu} item={item} i={i} />
           </div>
         ))}
       </div>

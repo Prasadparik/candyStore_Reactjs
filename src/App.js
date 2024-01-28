@@ -16,7 +16,7 @@ function App() {
       {cartOpen && <Cart cartToggle={handleCartToggle} />}
       <Navbar cartToggle={handleCartToggle} />
       <Banner />
-      <AddMoreCandy />
+
       <FoodItemsList />
     </CartProvider>
   );
